@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "93bYpjCfJcQ=",
+  "success": true,
+  "projectFilePath": "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/blazor_dotnet06.csproj",
+  "expectedPackageFiles": [
+    "/Users/khai/.nuget/packages/microsoft.aspnetcore.app.internal.assets/10.0.1/microsoft.aspnetcore.app.internal.assets.10.0.1.nupkg.sha512",
+    "/Users/khai/.nuget/packages/microsoft.aspnetcore.openapi/10.0.1/microsoft.aspnetcore.openapi.10.0.1.nupkg.sha512",
+    "/Users/khai/.nuget/packages/microsoft.openapi/2.0.0/microsoft.openapi.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

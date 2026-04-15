@@ -1,0 +1,67 @@
+@page "/detail/{id}"
+@*Dùng để call api*@
+@inject HttpClient _httpClient
+
+
+
+<div class="container">
+    <h3>Detail</h3>
+    <p>Mã sản phẩm: @id</p>
+    <img src="@prodDetail.Image" alt="@prodDetail.Alias" />
+
+
+    <h3>Related Product</h3>
+    <div class="row">
+        @foreach (RelatedProductViewModel prodRelate in prodDetail.RelatedProducts)
+        {
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="@prodRelate.Image" alt="@prodDetail.Alias" />
+                    <div class="card-body">
+                        <h3 class="card-title">@prodDetail.Name</h3>
+                        <p class="card-text">@prodDetail.Price</p>
+                        <a href="/detail/@prodRelate.Id" class="btn btn-dark">Detail</a>
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+
+</div>
+
+
+@code {
+
+    [Parameter]
+    public string id { get; set; } = "0";
+    ProductDetailViewModel prodDetail = new ProductDetailViewModel();
+
+
+       public async Task GetProductDetail()
+    {
+        var response = await
+   _httpClient.GetFromJsonAsync<ResponseType<ProductDetailViewModel>>(@$"https://apistore.cybersoft.edu.vn/api/Product/getbyid?id={id}");
+        //Sau khi lấy dữ liệu từ api về gán vào prodDetail để binding lên giao diện
+        prodDetail = response.content;
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        //Khi trang vừa load xong thì gọi api để lấy dữ liệu từ server map vào prodDetail
+
+        await GetProductDetail();
+
+   
+
+    }
+
+ 
+
+    protected override async Task OnParametersSetAsync()
+    {
+        //Kích hoạt khi các thuộc tính [Parameter thay đổi]
+        await GetProductDetail();
+
+            
+    }
+}
