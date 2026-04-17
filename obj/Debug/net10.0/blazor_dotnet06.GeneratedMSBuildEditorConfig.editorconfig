@@ -38,6 +38,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/LifeCycleBalzor/ShouldRender/ChildComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTGlmZUN5Y2xlQmFsem9yL1Nob3VsZFJlbmRlci9DaGlsZENvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/LifeCycleBalzor/ShouldRender/ParentComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTGlmZUN5Y2xlQmFsem9yL1Nob3VsZFJlbmRlci9QYXJlbnRDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

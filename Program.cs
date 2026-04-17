@@ -10,15 +10,20 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddHttpClient(); //Thư viện dùng để call api từ server khác
 
 //Trước app là DI (tiêm các service vào ứng dụng)
+//Sử dụng các hàm từ service
+builder.Services.AddSignalR();
 
 var app = builder.Build();
 
 
-//Sử dụng các hàm từ service
+
 
 app.UseRouting();
 app.MapBlazorHub(); //kích hoạt server socket của blazor web
 app.MapFallbackToPage("/_Host");
+
+app.UseStaticFiles(); // middleware để sử dụng file tĩnh như css, js, img
+
 
 
 app.Run();

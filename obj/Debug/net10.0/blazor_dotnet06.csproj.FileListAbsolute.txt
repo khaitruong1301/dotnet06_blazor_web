@@ -38,3 +38,4 @@
 /Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/obj/Debug/net10.0/ValidatableTypeAttribute.cs
 /Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/obj/Debug/net10.0/compressed/c5p3wlyoun-{0}-wmp8iwak4q-wmp8iwak4q.gz
 /Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/obj/Debug/net10.0/compressed/9vf54nuwl5-{0}-2lgipwaf5j-2lgipwaf5j.gz
+/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/obj/Debug/net10.0/blazor_dotnet06.sourcelink.json
