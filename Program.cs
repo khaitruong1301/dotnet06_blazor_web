@@ -1,3 +1,5 @@
+using blazor_dotnet06.Services;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 var builder = WebApplication.CreateBuilder(args);
 
 //DI các thư viện cho ứng dụng
@@ -12,6 +14,15 @@ builder.Services.AddHttpClient(); //Thư viện dùng để call api từ server
 //Trước app là DI (tiêm các service vào ứng dụng)
 //Sử dụng các hàm từ service
 builder.Services.AddSignalR();
+
+
+//DI các service management
+builder.Services.AddScoped<NumberService>();
+builder.Services.AddScoped<CarService>();
+
+
+
+
 
 var app = builder.Build();
 

@@ -1,0 +1,62 @@
+@page "/demo-js"
+@inject IJSRuntime _jsClient
+@inject HttpClient _dotNetHttp
+
+
+<div class="container">
+    @* <img src="/img/hinhanh.jpg" alt="..." /> *@
+
+
+    <button class="btn btn-dark" @onclick="handleClick">onclick</button>
+
+    <button class="btn btn-primary" @onclick="getDataApi">Get data api</button>
+
+    <div id="content" class="row">
+        
+    </div>
+
+    <button id="btnTinhTong" class="btn btn-primary" @onclick="tinhTong">
+        Tính tổng
+    </button>
+
+
+
+    <button class="btn btn-primary" @onclick="luuStorage">Lưu storage</button>
+</div>
+
+
+
+
+@code {
+
+    public int a { get; set; } = 1;
+    public int b { get; set; } = 2;
+    public async void luuStorage() {
+        await _jsClient.InvokeVoidAsync("setLocalstorage");
+    }
+
+    public async void tinhTong() {
+       int tong = await _jsClient.InvokeAsync<int>("tinhTong", a, b);
+
+        Console.WriteLine($@"Tổng = {tong}");
+    }
+
+
+    public async void handleClick () {
+        Console.WriteLine("abc");
+        await _jsClient.InvokeVoidAsync("sayHello", "Cybersoft", "Khải");
+    }
+
+    public async void getDataApi(){
+        //await _jsClient.InvokeVoidAsync("fetchDataApi");
+
+        var res = await _dotNetHttp.GetFromJsonAsync<dynamic>("https://apistore.cybersoft.edu.vn/api/Product");
+
+        Console.WriteLine(@$"{JsonSerializer.Serialize(res)}");
+    
+    }
+
+}
+
+
+
