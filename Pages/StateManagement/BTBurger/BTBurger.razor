@@ -1,0 +1,86 @@
+@page "/bt-burger"
+@implements IDisposable
+@inject BurgerService _burgerService
+
+<div class="container">
+    <h3>Bài tập burger</h3>
+    <div class="row">
+        <div class="col-md-6">
+            <h3 class="text-success">Burger</h3>
+
+            <div class="breadTop"></div>
+            <!--salad -->
+            @foreach (Topping item in _burgerService.lstTopping)
+            {
+                for (int i = 1; i <= item.quantity; i++)
+                {
+                    <div class="@item.name"></div>
+                }
+            }
+            <div class="breadBottom"></div>
+        </div>
+        <div class="col-md-6">
+            <h3 class="menu">Menu</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Topping item in _burgerService.lstTopping)
+                    {
+                        <tr>
+                            <td>@item.name</td>
+                            <td>@item.price</td>
+                            <td>
+                                <button class="btn btn-success me-2" @onclick="@(e => handleChangeQuantity(item.name,1))">+</button>
+                                @item.quantity
+                                <button class="btn btn-success ms-2" @onclick="@(e => handleChangeQuantity(item.name,-1))">-</button>
+                            </td>
+                            <td>10</td>
+                            <td>
+                                <button class="btn btn-danger" @onclick="@(e => _burgerService.RemoveItem(item.name))">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3"></td>
+                        <td class="fw-bold">total</td>
+                        <td class="fw-bold">
+                            @_burgerService.lstTopping.Sum(item=>item.quantity * item.price).ToString("N0")
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+@code {
+    public void handleChangeQuantity(string name,int quantity){
+        _burgerService.ChangeQuantity(name, quantity);
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        _burgerService.OnChange += StateHasChanged;
+    }
+
+
+
+    public void Dispose()
+    {
+        _burgerService.OnChange -= StateHasChanged;
+
+    }
+}

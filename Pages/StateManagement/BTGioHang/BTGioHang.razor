@@ -1,0 +1,24 @@
+@page "/bt-giohang"
+
+
+
+
+
+<div class="container">
+    <h3>Bài tập giỏ hàng</h3>
+    <div class="row">
+        @foreach(ProductCartViewModel prod in ArrProductDefault.arrProduct){
+             <div class="col-md-4">
+            <SanPham prod="@prod" />
+        </div>
+        }
+       
+    </div>
+
+    <GioHang />
+
+</div>
+
+@code {
+
+}

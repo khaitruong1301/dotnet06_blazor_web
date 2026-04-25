@@ -19,7 +19,8 @@ builder.Services.AddSignalR();
 //DI các service management
 builder.Services.AddScoped<NumberService>();
 builder.Services.AddScoped<CarService>();
-
+builder.Services.AddScoped<CartService>();
+builder.Services.AddScoped<BurgerService>();
 
 
 

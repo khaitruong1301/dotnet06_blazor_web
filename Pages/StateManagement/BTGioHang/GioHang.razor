@@ -1,0 +1,64 @@
+@inject CartService _cartService
+
+@implements IDisposable
+
+<h3>Giỏ hàng</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (ProductCartViewModel prod in _cartService.lstProd)
+        {
+
+            string total = (prod.quantity * prod.price).ToString("N0");
+
+            <tr>
+                <td>@prod.Id</td>
+                <td>
+                    <img src="@prod.image" alt="..." width="50" />
+                </td>
+                <td>@prod.name</td>
+                <td>@prod.price</td>
+                <td>
+                    <button class="btn btn-primary mx-2" @onclick="@(async e => handleChangeQuantity(prod.Id,1))">+</button>
+                    @prod.quantity
+                    <button class="btn btn-primary mx-2" @onclick="@(async e => handleChangeQuantity(prod.Id,-1))">-</button>
+
+                </td>
+                <td>@total</td>
+                <td>
+                    <button class="btn btn-danger" @onclick="@(async e => handleDelete(prod.Id))">Delete</button>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+@code {
+    public async Task handleChangeQuantity(int idClick,int quantity) {
+      await   _cartService.ChangeQuantity(idClick, quantity);
+    }
+    public async Task handleDelete(int id){
+       await _cartService.RemoveItem(id);
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        _cartService.OnChange += StateHasChanged;
+    }
+
+    public void Dispose()
+    {
+        _cartService.OnChange -= StateHasChanged;
+
+    }
+}
