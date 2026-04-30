@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace blazor_dotnet06.Shared
+namespace blazor_dotnet06.Pages.StateManagement.BTBurger
 {
     #line default
     using global::System;
@@ -80,18 +80,20 @@ using blazor_dotnet06.Services
     ;
     #line default
     #line hidden
-    #nullable restore
-    public partial class HomePageMaster : 
+    [global::Microsoft.AspNetCore.Components.RouteAttribute(
+    // language=Route,Component
 #nullable restore
-#line (5,11)-(5,30) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Shared/HomePageMaster.razor"
-LayoutComponentBase
+#line (1,7)-(1,19) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/StateManagement/BTBurger/BTBurger.razor"
+"/bt-burger"
 
 #line default
 #line hidden
 #nullable disable
-    , 
+    )]
+    #nullable restore
+    public partial class BTBurger : global::Microsoft.AspNetCore.Components.ComponentBase, 
 #nullable restore
-#line (2,13)-(2,24) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Shared/HomePageMaster.razor"
+#line (2,13)-(2,24) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/StateManagement/BTBurger/BTBurger.razor"
 IDisposable
 
 #line default
@@ -106,16 +108,21 @@ IDisposable
         }
         #pragma warning restore 1998
 #nullable restore
-#line (64,8)-(75,1) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Shared/HomePageMaster.razor"
+#line (70,8)-(86,1) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/StateManagement/BTBurger/BTBurger.razor"
 
+    public void handleChangeQuantity(string name,int quantity){
+        _burgerService.ChangeQuantity(name, quantity);
+    }
     protected override async Task OnInitializedAsync()
     {
-        _cartService.OnChange += StateHasChanged;
+        _burgerService.OnChange += StateHasChanged;
     }
+
+
 
     public void Dispose()
     {
-        _cartService.OnChange -= StateHasChanged;
+        _burgerService.OnChange -= StateHasChanged;
 
     }
 
@@ -125,16 +132,16 @@ IDisposable
 
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private 
 #nullable restore
-#line (1,9)-(1,20) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Shared/HomePageMaster.razor"
-CartService
+#line (3,9)-(3,22) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/StateManagement/BTBurger/BTBurger.razor"
+BurgerService
 
 #line default
 #line hidden
 #nullable disable
          
 #nullable restore
-#line (1,21)-(1,33) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Shared/HomePageMaster.razor"
-_cartService
+#line (3,23)-(3,37) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/StateManagement/BTBurger/BTBurger.razor"
+_burgerService
 
 #line default
 #line hidden

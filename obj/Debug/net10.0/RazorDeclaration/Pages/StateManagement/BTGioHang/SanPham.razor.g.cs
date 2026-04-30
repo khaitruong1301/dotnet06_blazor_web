@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace blazor_dotnet06.Shared
+namespace blazor_dotnet06.Pages.StateManagement.BTGioHang
 {
     #line default
     using global::System;
@@ -81,23 +81,7 @@ using blazor_dotnet06.Services
     #line default
     #line hidden
     #nullable restore
-    public partial class HomePageMaster : 
-#nullable restore
-#line (5,11)-(5,30) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Shared/HomePageMaster.razor"
-LayoutComponentBase
-
-#line default
-#line hidden
-#nullable disable
-    , 
-#nullable restore
-#line (2,13)-(2,24) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Shared/HomePageMaster.razor"
-IDisposable
-
-#line default
-#line hidden
-#nullable disable
-
+    public partial class SanPham : global::Microsoft.AspNetCore.Components.ComponentBase
     #nullable disable
     {
         #pragma warning disable 1998
@@ -106,7 +90,14 @@ IDisposable
         }
         #pragma warning restore 1998
 #nullable restore
-#line (64,8)-(75,1) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Shared/HomePageMaster.razor"
+#line (13,8)-(31,1) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/StateManagement/BTGioHang/SanPham.razor"
+
+    [Parameter]
+    public ProductCartViewModel prod { get; set; } = new ProductCartViewModel();
+
+    public async Task handleAddToCart(ProductCartViewModel prodClick){
+       await _cartService.AddItem(prodClick);
+    }
 
     protected override async Task OnInitializedAsync()
     {
@@ -125,7 +116,7 @@ IDisposable
 
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private 
 #nullable restore
-#line (1,9)-(1,20) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Shared/HomePageMaster.razor"
+#line (1,9)-(1,20) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/StateManagement/BTGioHang/SanPham.razor"
 CartService
 
 #line default
@@ -133,7 +124,7 @@ CartService
 #nullable disable
          
 #nullable restore
-#line (1,21)-(1,33) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Shared/HomePageMaster.razor"
+#line (1,21)-(1,33) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/StateManagement/BTGioHang/SanPham.razor"
 _cartService
 
 #line default

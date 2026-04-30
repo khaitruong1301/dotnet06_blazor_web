@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace blazor_dotnet06.Shared
+namespace blazor_dotnet06.Pages.StateManagement.BTGioHang
 {
     #line default
     using global::System;
@@ -80,24 +80,18 @@ using blazor_dotnet06.Services
     ;
     #line default
     #line hidden
+    [global::Microsoft.AspNetCore.Components.RouteAttribute(
+    // language=Route,Component
+#nullable restore
+#line (1,7)-(1,20) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/StateManagement/BTGioHang/BTGioHang.razor"
+"/bt-giohang"
+
+#line default
+#line hidden
+#nullable disable
+    )]
     #nullable restore
-    public partial class HomePageMaster : 
-#nullable restore
-#line (5,11)-(5,30) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Shared/HomePageMaster.razor"
-LayoutComponentBase
-
-#line default
-#line hidden
-#nullable disable
-    , 
-#nullable restore
-#line (2,13)-(2,24) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Shared/HomePageMaster.razor"
-IDisposable
-
-#line default
-#line hidden
-#nullable disable
-
+    public partial class BTGioHang : global::Microsoft.AspNetCore.Components.ComponentBase
     #nullable disable
     {
         #pragma warning disable 1998
@@ -106,41 +100,14 @@ IDisposable
         }
         #pragma warning restore 1998
 #nullable restore
-#line (64,8)-(75,1) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Shared/HomePageMaster.razor"
+#line (22,8)-(24,1) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/StateManagement/BTGioHang/BTGioHang.razor"
 
-    protected override async Task OnInitializedAsync()
-    {
-        _cartService.OnChange += StateHasChanged;
-    }
 
-    public void Dispose()
-    {
-        _cartService.OnChange -= StateHasChanged;
-
-    }
 
 #line default
 #line hidden
 #nullable disable
 
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private 
-#nullable restore
-#line (1,9)-(1,20) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Shared/HomePageMaster.razor"
-CartService
-
-#line default
-#line hidden
-#nullable disable
-         
-#nullable restore
-#line (1,21)-(1,33) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Shared/HomePageMaster.razor"
-_cartService
-
-#line default
-#line hidden
-#nullable disable
-         { get; set; }
-         = default!;
     }
 }
 #pragma warning restore 1591

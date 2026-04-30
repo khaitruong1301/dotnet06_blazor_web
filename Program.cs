@@ -21,6 +21,7 @@ builder.Services.AddScoped<NumberService>();
 builder.Services.AddScoped<CarService>();
 builder.Services.AddScoped<CartService>();
 builder.Services.AddScoped<BurgerService>();
+builder.Services.AddScoped<StoreService>();
 
 
 

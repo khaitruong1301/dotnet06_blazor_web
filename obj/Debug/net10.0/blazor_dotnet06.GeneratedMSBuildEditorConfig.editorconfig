@@ -30,6 +30,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ29udGFjdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/CRUDStore/CreateStore.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ1JVRFN0b3JlL0NyZWF0ZVN0b3JlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/CRUDStore/CRUDStore.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ1JVRFN0b3JlL0NSVURTdG9yZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/CRUDStore/StoreDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ1JVRFN0b3JlL1N0b3JlRGV0YWlsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/DemoJSRuntime.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRGVtb0pTUnVudGltZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

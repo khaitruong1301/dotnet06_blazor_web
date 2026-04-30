@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace blazor_dotnet06.Shared
+namespace blazor_dotnet06.Pages.StateManagement.BTGioHang
 {
     #line default
     using global::System;
@@ -81,17 +81,9 @@ using blazor_dotnet06.Services
     #line default
     #line hidden
     #nullable restore
-    public partial class HomePageMaster : 
+    public partial class GioHang : global::Microsoft.AspNetCore.Components.ComponentBase, 
 #nullable restore
-#line (5,11)-(5,30) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Shared/HomePageMaster.razor"
-LayoutComponentBase
-
-#line default
-#line hidden
-#nullable disable
-    , 
-#nullable restore
-#line (2,13)-(2,24) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Shared/HomePageMaster.razor"
+#line (3,13)-(3,24) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/StateManagement/BTGioHang/GioHang.razor"
 IDisposable
 
 #line default
@@ -106,8 +98,14 @@ IDisposable
         }
         #pragma warning restore 1998
 #nullable restore
-#line (64,8)-(75,1) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Shared/HomePageMaster.razor"
+#line (47,8)-(64,1) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/StateManagement/BTGioHang/GioHang.razor"
 
+    public async Task handleChangeQuantity(int idClick,int quantity) {
+      await   _cartService.ChangeQuantity(idClick, quantity);
+    }
+    public async Task handleDelete(int id){
+       await _cartService.RemoveItem(id);
+    }
     protected override async Task OnInitializedAsync()
     {
         _cartService.OnChange += StateHasChanged;
@@ -125,7 +123,7 @@ IDisposable
 
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private 
 #nullable restore
-#line (1,9)-(1,20) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Shared/HomePageMaster.razor"
+#line (1,9)-(1,20) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/StateManagement/BTGioHang/GioHang.razor"
 CartService
 
 #line default
@@ -133,7 +131,7 @@ CartService
 #nullable disable
          
 #nullable restore
-#line (1,21)-(1,33) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Shared/HomePageMaster.razor"
+#line (1,21)-(1,33) "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/StateManagement/BTGioHang/GioHang.razor"
 _cartService
 
 #line default
