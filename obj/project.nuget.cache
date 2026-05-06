@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "93bYpjCfJcQ=",
+  "dgSpecHash": "QfiZGlevo3M=",
   "success": true,
   "projectFilePath": "/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/blazor_dotnet06.csproj",
   "expectedPackageFiles": [
     "/Users/khai/.nuget/packages/microsoft.aspnetcore.app.internal.assets/10.0.1/microsoft.aspnetcore.app.internal.assets.10.0.1.nupkg.sha512",
+    "/Users/khai/.nuget/packages/microsoft.aspnetcore.http.connections.client/10.0.7/microsoft.aspnetcore.http.connections.client.10.0.7.nupkg.sha512",
     "/Users/khai/.nuget/packages/microsoft.aspnetcore.openapi/10.0.1/microsoft.aspnetcore.openapi.10.0.1.nupkg.sha512",
+    "/Users/khai/.nuget/packages/microsoft.aspnetcore.signalr.client/10.0.7/microsoft.aspnetcore.signalr.client.10.0.7.nupkg.sha512",
+    "/Users/khai/.nuget/packages/microsoft.aspnetcore.signalr.client.core/10.0.7/microsoft.aspnetcore.signalr.client.core.10.0.7.nupkg.sha512",
     "/Users/khai/.nuget/packages/microsoft.openapi/2.0.0/microsoft.openapi.2.0.0.nupkg.sha512"
   ],
   "logs": []

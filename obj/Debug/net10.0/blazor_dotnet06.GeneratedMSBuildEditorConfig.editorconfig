@@ -70,6 +70,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVnaXN0ZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/SignalR/DemoRoomHub.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2lnbmFsUi9EZW1vUm9vbUh1Yi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/StateManagement/BTBurger/BTBurger.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU3RhdGVNYW5hZ2VtZW50L0JUQnVyZ2VyL0JUQnVyZ2VyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
