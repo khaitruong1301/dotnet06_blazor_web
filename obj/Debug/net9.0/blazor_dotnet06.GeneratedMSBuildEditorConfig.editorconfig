@@ -1,0 +1,119 @@
+is_global = true
+build_property.TargetFramework = net9.0
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v9.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = blazor_dotnet06
+build_property.RootNamespace = blazor_dotnet06
+build_property.ProjectDir = /Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/Admin.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/Contact.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ29udGFjdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/CRUDStore/CreateStore.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ1JVRFN0b3JlL0NyZWF0ZVN0b3JlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/CRUDStore/CRUDStore.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ1JVRFN0b3JlL0NSVURTdG9yZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/CRUDStore/StoreDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ1JVRFN0b3JlL1N0b3JlRGV0YWlsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/DemoJSRuntime.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRGVtb0pTUnVudGltZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/Detail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRGV0YWlsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/LifeCycleBalzor/ShouldRender/ChildComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTGlmZUN5Y2xlQmFsem9yL1Nob3VsZFJlbmRlci9DaGlsZENvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/LifeCycleBalzor/ShouldRender/ParentComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTGlmZUN5Y2xlQmFsem9yL1Nob3VsZFJlbmRlci9QYXJlbnRDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/Profile.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJvZmlsZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/Register.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVnaXN0ZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/SignalR/DemoRoomHub.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2lnbmFsUi9EZW1vUm9vbUh1Yi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/StateManagement/BTBurger/BTBurger.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU3RhdGVNYW5hZ2VtZW50L0JUQnVyZ2VyL0JUQnVyZ2VyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/StateManagement/BTGioHang/BTGioHang.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU3RhdGVNYW5hZ2VtZW50L0JUR2lvSGFuZy9CVEdpb0hhbmcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/StateManagement/BTGioHang/GioHang.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU3RhdGVNYW5hZ2VtZW50L0JUR2lvSGFuZy9HaW9IYW5nLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/StateManagement/BTGioHang/SanPham.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU3RhdGVNYW5hZ2VtZW50L0JUR2lvSGFuZy9TYW5QaGFtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/StateManagement/StateManagementDemo.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU3RhdGVNYW5hZ2VtZW50L1N0YXRlTWFuYWdlbWVudERlbW8ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/User.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVXNlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Shared/HomePageMaster.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL0hvbWVQYWdlTWFzdGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Cybersoft/dotnet06/web_blazor/blazor_dotnet06/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

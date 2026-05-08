@@ -1,5 +1,14 @@
 using blazor_dotnet06.Services;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+
+using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
+using System.Text;
+using Microsoft.AspNetCore.Components.Authorization;
+
+using Blazored.LocalStorage;
+
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 //DI các thư viện cho ứng dụng
@@ -26,6 +35,55 @@ builder.Services.AddScoped<BurgerService>();
 builder.Services.AddScoped<StoreService>();
 builder.Services.AddScoped<RoomService>();
 
+//DI phân quyền blazor component
+
+//DI phân quyền jwt
+// Cấu hình accesstoken jwt
+var key = builder.Configuration["Jwt:Key"];           // Khóa bí mật để ký token
+var issuer = builder.Configuration["Jwt:Issuer"];     // Issuer (bên phát hành token)
+var audience = builder.Configuration["Jwt:Audience"]; // Audience (người nhận token)
+// 2. Cấu hình Authentication sử dụng JWT Bearer
+builder.Services.AddAuthentication("Bearer").AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+
+        ValidateIssuerSigningKey = true, // Xác thực key bí mật của token
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key)),
+        ValidateIssuer = true,// Xác thực Issuer 
+        ValidIssuer = issuer, // Phải khớp với Issuer trong token
+        ValidateAudience = true,    // Xác thực Audience
+        ValidAudience = audience, // Phải khớp với Audience trong token
+        ValidateLifetime = true, // Xác thực thời gian hết hạn của token
+        ClockSkew = TimeSpan.Zero, // Bỏ qua độ trễ thời gian giữa server và client (ngăn lỗi thời gian)
+        RoleClaimType = ClaimTypes.Role, // Ánh xạ claim role
+        NameClaimType = "UserName",
+    };
+});
+
+// 3. Cấu hình Authorization (Phân quyền theo Role)
+builder.Services.AddAuthorization(options =>
+{
+    // Chính sách chỉ cho phép Admin truy cập
+    options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
+    // Chính sách chỉ cho phép User truy cập
+    options.AddPolicy("UserOnly", policy => policy.RequireRole("User"));
+});
+
+
+// 4. Thêm AuthorizationCore để sử dụng trong Blazor Components (Phần view)
+builder.Services.AddAuthenticationCore(); //Xác thực token hợp lệ
+builder.Services.AddAuthorizationCore(); //Xác thực vai trò (Role phân quyền)
+
+
+//DI JWT
+builder.Services.AddScoped<JwtAuthService>();
+//DI Localstorage viết C#
+builder.Services.AddBlazoredLocalStorage();
+//DI custom check token
+builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthStateProvider>();
+
+
 //Khai báo cho client nào có thể connect được đến server
 builder.Services.AddCors(options =>
 {
@@ -41,7 +99,15 @@ builder.Services.AddCors(options =>
 
 
 
+
+
+
 var app = builder.Build();
+
+//Kích hoạt hàm phân quyên
+app.UseAuthentication(); //kích hoạt xác thực
+app.UseAuthorization(); //kích hoạt phân quyền
+
 
 app.UseCors("AllowFrontend");
 

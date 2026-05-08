@@ -1,0 +1,17 @@
+@page "/admin"
+
+@* @attribute [Authorize(Roles ="Admin,User")]  *@
+@* trong token có chứa role Admin thì sẽ cho vào*@
+
+
+<div class="container">
+    <h3>Admin page</h3>
+
+</div>
+
+
+<AuthorizeRouteView role="Admin">
+    <NotAuthorized>
+        không có quyền
+    </NotAuthorized>
+</AuthorizeRouteView>
